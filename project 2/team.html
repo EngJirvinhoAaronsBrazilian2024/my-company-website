@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jirvinho Software World - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background: linear-gradient(90deg, #4b6cb7, #182848);
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            border-radius: 50%;
+            animation: logoBounce 2s infinite;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #FFD700;
+        }
+
+        #team {
+            padding: 40px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        #team h2 {
+            margin-bottom: 30px;
+            font-size: 2em;
+            color: #4CAF50;
+        }
+
+        .team-member {
+            display: inline-block;
+            width: 250px;
+            margin: 20px;
+            text-align: center;
+            background: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-member img {
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+        }
+
+        .team-member h3 {
+            margin: 15px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .team-member p {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #4b6cb7, #182848);
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer .footer-links a:hover {
+            color: #FFD700;
+        }
+
+        @keyframes logoBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" width="100px" height="100px" alt="Jirvinho Software World Logo">
+        <div class="logo">Jirvinho Software World</div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                <li><a href="team.html"><i class="fas fa-users"></i> Team</a></li>
+                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="team">
+        <h2>Our Team</h2>
+        <div class="team-member">
+            <img src="ceo.jpg" alt="CEO">
+            <h3>Eng Aaron Kisakye (Chief Executive Officer)</h3>
+            <p>Manage your customer relationships effectively with our intuitive CRM software.</p>
+        </div>
+        <div class="team-member">
+            <img src="tb.jpg" alt="Designer">
+            <h3>Tombe Emmanuel (Designer and Data Analyst)</h3>
+            <p>Streamline your project management with our comprehensive tool.</p>
+        </div>
+        <div class="team-member">
+            <img src="1.jpg" alt="UX Designer">
+            <h3>Eng Dombokati Natale (UX Designer)</h3>
+            <p>Gain insights into your business performance with our analytics software.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Home</a> |
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">Contact</a>
+        </div>
+        <p>&copy; 2025 Jirvinho Software World. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.style.transform = 'scale(1.1)';
+                link.style.transition = 'transform 0.3s';
+            });
+            link.addEventListener('mouseout', () => {
+                link.style.transform = 'scale(1)';
+            });
+        });
+
+        document.querySelectorAll('.team-member').forEach(member => {
+            member.addEventListener('mouseover', () => {
+                member.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.2)';
+                member.style.transition = 'box-shadow 0.3s';
+            });
+            member.addEventListener('mouseout', () => {
+                member.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            });
+        });
+    </script>
+</body>
+</html>
